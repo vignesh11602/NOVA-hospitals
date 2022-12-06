@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Appointment Page</title>
+    </head>
+    <body background="{{ pic[0] }}" style="background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
+        <form action="/" method="POST"> 
+            <table width="100%" style="border: 1px solid black;">
+                <td ><img src="{{ pic[1] }}" width="200 px" height="125 px"/></td>
+                <td style="vertical-align: middle;text-align: center;"><div style="font-size: 65px;color:blue">NOVA Hospital Management System</div></td>
+            </table>
+            <h1 align = "center">Book an Appointment</h1>
+            <h2 align = "center">Enter your details to get an appointment from the Nova Clinic</h2>
+            <div>
+                <table  width="25%" style="margin-left: 37.5%;margin-right: 37.5%;font-size: 20px;">
+                    <tr>
+                        <td>First Name:</td>
+                        <td><input type="text" placeholder="First Name" name="fname" style="font-size: 15px" required></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td>
+                        <td><input type="text" placeholder="Last Name" name="lname" style="font-size: 15px" required></td>
+                    </tr>
+                    <tr>
+                        <td>Gender:</td>
+                        <td>
+                            <select name="gender" style= "font-size: 15px" required>
+                                <option value="none" selected>--Select Gender--</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">other</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth:</td>
+                        <td><input type="date"  name="dob" style = "font-size: 15px" required></td>
+                    </tr>
+                    <tr>
+                        <td>Date of Appointment:</td>
+                        <td><input type="date"  name="appoint" style = "font-size: 15px" required></td>
+                    </tr>
+                    <tr>
+                        <td>Time of Appointment:</td>
+                        <td><input type="time" name="time" style ="font-size: 15px" required></td>
+                    </tr>    
+                </table>
+            </div>
+            <br>
+            <br>
+            <div align = "center" width = "100%">
+                <input type="Submit" value = "submit" style = "width: 120px; height: 40px; border-radius: 8px; color: aliceblue; background-color: #060692; font-size:20px">
+            </div>
+        </form>
+    </body>
+</html>

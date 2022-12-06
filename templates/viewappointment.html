@@ -1,0 +1,39 @@
+<htmL>
+    <head>
+        <title>View Page</title>
+        <style>            
+            .hi {
+              border: 1px solid #dddddd;
+              text-align:center;
+              padding: 8px;
+            }
+            </style>
+    </head>
+    <body background="{{ pic[0] }}" style="background-repeat: no-repeat;background-attachment: fixed;background-size: 100% 100%;">
+        <table width="100%" style="border: 1px solid black;">
+            <td ><img src="{{ pic[1] }}" width="200 px" height="125 px"/></td>
+            <td style="vertical-align: middle;text-align: center;"><div style="font-size: 65px;color:blue">NOVA Hospital Management System</div></td>
+        </table>
+        <h1 align = "center"> Patient Appointment Details</h1>
+        <h2 align = "center">Kindly check Your Appointment Status Here</h2>
+        <table style="border-collapse: collapse;width: 50%;margin-left: 25%;margin-right: 25%;background-color: white;">
+            <tr style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
+                <td class = "hi"><b>First Name</b></td>
+                <td class = "hi"><b>Last Name</b></td>
+                <td class = "hi"><b>Gender</b></td>
+                <td class = "hi"><b>Date of Appointment</b></td>
+                <td class = "hi"><b>Time of Appointment</b></td>
+                <td class = "hi"><b>Status</b></td>
+            </tr>
+            {% for key, value in pic[2].items() %}
+                {% for data in value %}
+                    <tr style="border: 1px solid #dddddd;text-align: left;padding: 8px;">
+                    {% for key, value in data.items() %}
+                        <td class = "hi">{{ value }}</td>
+                    {% endfor %}
+                    </tr>
+                {% endfor %}
+            {% endfor %}
+        </table>
+    </body>
+</htmL>
